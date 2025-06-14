@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes flameFlicker {
+  0% {
+    text-shadow: 0 0 6px #ffa500, 0 0 20px #ff4500, 0 0 40px #ff0000;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    text-shadow: 0 0 10px #ffd700, 0 0 25px #ff6347, 0 0 50px #ff4500;
+    transform: scale(1.03) rotate(0deg);
+  }
+  100% {
+    text-shadow: 0 0 6px #ffa500, 0 0 20px #ff4500, 0 0 40px #ff0000;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.flaming-text {
+  animation: flameFlicker 1.5s infinite ease-in-out;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #ffcc00, #ff6600, #ff3300, #cc0000);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+}

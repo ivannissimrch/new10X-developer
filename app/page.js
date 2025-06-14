@@ -25,7 +25,7 @@ export default function MemeTransform() {
               Before Chingu
             </h1>
             <h2 className="text-blue-500 text-xl sm:text-2xl mb-4">
-              I didn't know what app to build
+              I didn&apos;t know what app to build
             </h2>
             <motion.img
               key="before"
